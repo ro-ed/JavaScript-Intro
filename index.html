@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bish-Bosh</title>
+</head>
+<body>
+    <section class="top-block">
+        <div class="top-container">
+            <div class="text-container">
+                <h1>Bish-Bosh Version 11.3</h1>
+                <p>Bish-Bosh listar tal mellan 1 och det du väljer nedan().<br>
+                    Om talet är jämnt delbart med ditt valda Bish-tal() visas 'Bish' istället för talet.<br>
+                    Om talet är jämnt delbart med ditt valda Bosh-tal() visas 'Bosh' istället för talet.<br>
+                    Om talet är jämnt delbart med båda dina tal visas "Bish-Bosh".</p>
+            </div>
+            <div class="range-container">
+                <label for="antal" id="first-label">Antal nummer:</label>
+                <input name="range" id="antal" type="range" placeholder="Antal nummer:" min="0" max="300" value="0" oninput="AddListItem()">
+                <label for="antal" id="first-label-number">53</label>
+                <label for="bish" id="second-label">Bish-nummer:</label>
+                <input name="range" id="bish" type="range" placeholder="Bish-nummer:" min="0" max="100" value="0">
+                <label for="bish" id="second-label-number">45</label>
+                <label for="bosh" id="third-label">Bosh-nummer:</label>
+                <input name="range" id="bosh" type="range" placeholder="Bosh-nummer:" min="0" max="100" value="0">
+                <label for="bosh" id="third-label-number">45</label>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-block">
+        <div class="numbers-container">
+            <ol id="theOrderedList">
+                
+
+            </ol>
+        </div>
+       
+    </section>
+</body>
+
+<script src="input.js"></script>
+</html>
