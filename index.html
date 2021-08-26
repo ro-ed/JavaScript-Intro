@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Bish-Bosh</title>
+
 </head>
+
+
 <body>
     <section class="top-block">
         <div class="top-container">
@@ -22,7 +25,7 @@
             </div>
             <div class="range-container">
                 <label for="antal" id="first-label">Antal nummer:</label>
-                <input name="range" id="antal" type="range" placeholder="Antal nummer:" min="0" max="300" value="0" oninput="AddListItem()">
+                <input name="range" id="antal" type="range" placeholder="Antal nummer:" min="0" max="300" value="0" onchange="AddListItem()">
                 <label for="antal" id="first-label-number">53</label>
                 <label for="bish" id="second-label">Bish-nummer:</label>
                 <input name="range" id="bish" type="range" placeholder="Bish-nummer:" min="0" max="100" value="0">
@@ -35,8 +38,8 @@
     </section>
     <section class="bottom-block">
         <div class="numbers-container">
-            <ol id="theOrderedList">
-                
+            <ol id="lista">
+    
 
             </ol>
         </div>
@@ -45,4 +48,5 @@
 </body>
 
 <script src="input.js"></script>
+
 </html>

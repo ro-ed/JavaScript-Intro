@@ -7,32 +7,55 @@ slider1.oninput = function() {
     output1.innerHTML = this.value;
 }
 
-var slider2 = document.getElementById("bish");
+var bishNumber = document.getElementById("bish");
 var output2 = document.getElementById("second-label-number");
 
-output2.innerHTML = slider2.value;
+output2.innerHTML = bishNumber.value;
 
-slider2.oninput = function() {
+bishNumber.oninput = function() {
     output2.innerHTML = this.value;
 }
 
-var slider3 = document.getElementById("bosh");
+var boshNumber = document.getElementById("bosh");
 var output3 = document.getElementById("third-label-number");
 
-output3.innerHTML = slider3.value;
+output3.innerHTML = boshNumber.value;
 
-slider3.oninput = function() {
+boshNumber.oninput = function() {
     output3.innerHTML = this.value;
 }
 
+var listan = document.getElementById('lista');
+listan.innerHTML = '';
 
 
+var myOrderedList = document.getElementById('lista');
+ 
 function AddListItem() {
+    
+    myOrderedList.innerHTML = '';
+    for (let index = 1; index <= slider1.value; index++) {
+        var liElement = document.createElement('li');
+        myOrderedList.appendChild(liElement);
+        
+        if(bishNumber.value % boshNumber.value == 0){
+            var bishLi = document.createElement('li');
+            bishLi.innerHTML = "Bish-Bosh";
+            continue;
+        }
 
-   var myOrderedList = getElementById("theOrderedList");
-   var liElement = document.createElement("LI");
-   console.log("add");
-   myOrderedList = document.appendChild(liElement);
+        else if(index % bishNumber.value == 0) {
+
+        
+            continue;
+        }
+
+        else if(index % boshNumber.value == 0){
+
+            continue;
+        }
+    }
+        
     
 }
 
