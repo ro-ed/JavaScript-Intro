@@ -35,27 +35,46 @@ function AddListItem() {
     
     myOrderedList.innerHTML = '';
     for (let index = 1; index <= slider1.value; index++) {
-        var liElement = document.createElement('li');
-        myOrderedList.appendChild(liElement);
         
-        if(bishNumber.value % boshNumber.value == 0){
-            var bishLi = document.createElement('li');
-            bishLi.innerHTML = "Bish-Bosh";
+        if(index % bishNumber.value == 0 && index % boshNumber.value == 0){
+            let textnode = document.createTextNode('Bish-bosh');
+            let li = document.createElement('li');
+            li.appendChild(textnode);
+            li.style.color = "orange";
+            myOrderedList.appendChild(li);
             continue;
         }
-
+    
         else if(index % bishNumber.value == 0) {
-
-        
+            let textnode = document.createTextNode('Bish');
+            let li = document.createElement('li');
+            li.appendChild(textnode);
+            li.style.color = "red";
+            li.style.fontSize = "2em";
+            myOrderedList.appendChild(li); 
             continue;
         }
-
+    
         else if(index % boshNumber.value == 0){
-
+            let textnode = document.createTextNode('Bosh');
+            let li = document.createElement('li');
+            li.appendChild(textnode);
+            li.style.color = "blue";
+            li.style.fontSize = "2em";
+            myOrderedList.appendChild(li);
             continue;
+        }
+        
+        else {
+            var liElement = document.createElement('li');
+            myOrderedList.appendChild(liElement);
         }
     }
         
-    
 }
+
+
+
+
+
 
