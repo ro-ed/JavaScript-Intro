@@ -40,7 +40,7 @@ function AddListItem() {
             let textnode = document.createTextNode('Bish-bosh');
             let li = document.createElement('li');
             li.appendChild(textnode);
-            li.style.color = "orange";
+            li.style.color = "#FE840E";
             myOrderedList.appendChild(li);
             continue;
         }
